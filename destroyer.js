@@ -4,6 +4,7 @@
 // Remove all elements from the initial array that 
 // are of the same value as these arguments.
 // Note: You have to use the arguments object.
+//doing things...
 
 function destroyer(arr) {
     return arr;
