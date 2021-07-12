@@ -7,7 +7,17 @@
 //doing things...
 
 function destroyer(arr) {
-    return arr;
+  const myArgs = Array.prototype.slice.call(arguments);
+  let compArray = myArgs.shift();
+
+  for(let i = 0; i < myArgs.length; i++) {
+   if(compArray.includes(myArgs[i])) {
+     compArray = compArray.filter(item => item != myArgs[i]);
+   }
   }
-  
-  destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+  return compArray;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+// returns [1, 1]
